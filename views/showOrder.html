@@ -1,0 +1,46 @@
+
+<html>
+  <head><title>PizzaWizza</title></head>
+  <body>
+    <h2>Your order</h2>
+
+    <h3>Deliver to:</h3>
+		<b>${order.customer.name}</b><br/>
+		<b>${order.customer.address}</b><br/>
+		<b>${order.customer.city}, ${order.customer.state} 
+		    ${order.customer.zipCode}</b><br/>
+		<b>${order.customer.phoneNumber}</b><br/>
+		<hr/>
+		<h3>Order total: ${order.total}</h3>
+		<hr/>
+		<h3>Pizzas:</h3>
+		
+		<!-- This line won't be rendered if there is no pizza, don't worry about how, just style it! -->
+		<b>No pizzas in this order.</b>
+		
+		
+		<br/>
+		<ul> 
+    <!-- Here would be more than one list item -->
+		<li>${pizza.size} : 
+		  <!-- a coma delimeted list of toppings would be here -->
+      <!--for example: Pepperoni, Hamburger, Mushroom -->
+		</li>
+    </ul>
+		
+
+    <form>
+      <input type="hidden" name="_flowExecutionKey" 
+             value="${flowExecutionKey}"/>
+      <input type="submit" name="_eventId_createPizza" 
+             value="Create Pizza" />
+      <!-- This input element won't be rendered if there is no pizza, don't worry about how, just style it! -->
+      <input type="submit" name="_eventId_checkout" 
+             value="Checkout" />
+    
+      <input type="submit" name="_eventId_cancel" 
+             value="Cancel" />
+    </form>
+
+	</body>
+</html>

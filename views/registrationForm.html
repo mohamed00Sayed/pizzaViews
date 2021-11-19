@@ -1,0 +1,23 @@
+<html>
+
+  <head><title>PizzaWizza</title></head>
+
+  <body>
+    <h2>Customer Registration</h2>
+    
+    <form modelAttribute="order">
+      <input type="hidden" name="_flowExecutionKey" 
+             value="${flowExecutionKey}"/>
+      <b>Phone number: </b><input path="customer.phoneNumber"/><br/>
+      <b>Name: </b><input path="customer.name"/><br/>
+      <b>Address: </b><input path="customer.address"/><br/>
+      <b>City: </b><input path="customer.city"/><br/>
+      <b>State: </b><input path="customer.state"/><br/>
+      <b>Zip Code: </b><input path="customer.zipCode"/><br/>
+      <input type="submit" name="_eventId_submit" 
+             value="Submit" />
+      <input type="submit" name="_eventId_cancel" 
+             value="Cancel" />
+    </form>
+	</body>
+</html>
